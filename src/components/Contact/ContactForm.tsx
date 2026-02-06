@@ -66,17 +66,33 @@ const ContactForm = () => {
   ]
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    setIsSubmitting(true)
+    e.preventDefault();
+    setIsSubmitting(true);
 
-    // Simulate API call
-    await new Promise((resolve) => setTimeout(resolve, 1000))
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
 
-    toast.success("Message sent successfully! We'll get back to you within 24 hours.")
+      if (!res.ok) throw new Error("Failed");
 
-    setFormData({ name: "", email: "", phone: "", subject: "", message: "" })
-    setIsSubmitting(false)
-  }
+      toast.success("Message sent successfully!");
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        subject: "",
+        message: "",
+      });
+    } catch (error) {
+      toast.error("Something went wrong. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
 
   return (
     <section className="py-20">
