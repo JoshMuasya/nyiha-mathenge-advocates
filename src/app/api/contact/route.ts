@@ -1,45 +1,32 @@
-import nodemailer from 'nodemailer';
+import { Resend } from "resend";
 
-export async function POST(request: Request) {
-  const { name, email, message } = await request.json();
+const resend = new Resend(process.env.RESEND_API_KEY);
 
-  if (!name || !email || !message) {
-    return new Response(JSON.stringify({ success: false, error: 'Missing fields' }), {
-      status: 400,
-      headers: { 'Content-Type': 'application/json' }
-    });
-  }
-
+export async function POST(req: Request) {
   try {
-    const transporter = nodemailer.createTransport({
-      service: 'gmail',
-      auth: {
-        user: process.env.GMAIL_USER,
-        pass: process.env.GMAIL_APP_PASSWORD,
-      },
-    });
+    const { name, email, phone, subject, message } = await req.json();
 
-    await transporter.sendMail({
-      from: `"${name}" <${email}>`,
-      to: process.env.GMAIL_USER,
-      subject: `Website Inquiry from ${name}`,
+    await resend.emails.send({
+      from: "nma <info@nyihamathengelaw.com>",
+      to: ["info@nyihamathengelaw.com"],
+      replyTo: email,
+      subject: subject || "New Contact Form Message",
       html: `
+        <h2>New Contact Message</h2>
         <p><strong>Name:</strong> ${name}</p>
         <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Message:</strong><br>${message.replace(/\n/g, '<br>')}</p>
+        <p><strong>Phone:</strong> ${phone || "N/A"}</p>
+        <p><strong>Message:</strong></p>
+        <p>${message}</p>
       `,
     });
 
-    return new Response(JSON.stringify({ success: true }), {
-      status: 200,
-      headers: { 'Content-Type': 'application/json' }
-    });
-
+    return Response.json({ success: true });
   } catch (error) {
-    console.error('Nodemailer error:', error);
-    return new Response(JSON.stringify({ success: false, error: 'Failed to send email' }), {
-      status: 500,
-      headers: { 'Content-Type': 'application/json' }
-    });
+    console.error(error);
+    return Response.json(
+      { error: "Failed to send email" },
+      { status: 500 }
+    );
   }
 }
