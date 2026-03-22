@@ -14,16 +14,31 @@ const Attorney = () => {
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.8 }}
                         viewport={{ once: true }}
-                        className="relative"
+                        className="relative w-full max-w-sm mx-auto"
                     >
-                        <Image
-                            src=""
-                            alt="Lead Attorney"
-                            width={100}
-                            height={100}
-                            className="rounded-2xl shadow-strong w-full"
-                        />
-                        <div className="absolute -bottom-6 -right-6 w-full h-full bg-gradient-to-r from-primary/70 to-accent rounded-2xl opacity-20"></div>
+                        {/* Gradient Background */}
+                        <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-primary/70 to-accent opacity-20 scale-105" />
+
+                        {/* Image Wrapper */}
+                        <div className="relative flex items-center justify-center px-4 sm:px-6 md:px-8">
+
+                            {/* Image */}
+                            <div className="relative w-full">
+                                <Image
+                                    src="/nyiha.png"
+                                    alt="Lead Attorney"
+                                    width={300}
+                                    height={300}
+                                    className="rounded-2xl shadow-strong w-full h-auto object-cover"
+                                />
+
+                                
+                            </div>
+
+                        </div>
+
+                        {/* Cloudy Fade Overlay */}
+                                <div className="pointer-events-none absolute bottom-0 left-0 w-full h-[50%] rounded-b-2xl bg-gradient-to-t from-accent to-transparent opacity-50" />
                     </motion.div>
 
                     <motion.div
