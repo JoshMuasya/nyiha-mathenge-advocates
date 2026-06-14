@@ -25,20 +25,20 @@ const Attorney = () => {
                             {/* Image */}
                             <div className="relative w-full">
                                 <Image
-                                    src="/nyiha.png"
+                                    src="/nyiham.png"
                                     alt="Lead Attorney"
                                     width={300}
                                     height={300}
                                     className="rounded-2xl shadow-strong w-full h-auto object-cover"
                                 />
 
-                                
+
                             </div>
 
                         </div>
 
                         {/* Cloudy Fade Overlay */}
-                                <div className="pointer-events-none absolute bottom-0 left-0 w-full h-[50%] rounded-b-2xl bg-gradient-to-t from-accent to-transparent opacity-50" />
+                        <div className="pointer-events-none absolute bottom-0 left-0 w-full h-[50%] rounded-b-2xl bg-gradient-to-t from-accent to-transparent opacity-50" />
                     </motion.div>
 
                     <motion.div
