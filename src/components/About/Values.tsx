@@ -58,12 +58,12 @@ const Values = () => {
                             viewport={{ once: true }}
                         >
                             <Card className="h-full text-center hover:shadow-medium transition-all duration-300 group">
-                                <CardContent className="p-8">
+                                <CardContent className="p-8 flex flex-col items-center">
                                     <motion.div
                                         whileHover={{ scale: 1.1 }}
                                         transition={{ duration: 0.3 }}
-                                        className="w-16 h-16 bg-gradient-to-r from-primary/70 to-accent/70 backdrop-blur-md rounded-2xl 
-                               flex items-center justify-center mb-6 group-hover:scale-110 
+                                        className="w-16 h-16 mx-auto bg-gradient-to-r from-primary/70 to-accent/70 backdrop-blur-md rounded-2xl
+                               flex items-center justify-center mb-6 group-hover:scale-110
                                transition-transform shadow-md"
                                     >
                                         <value.icon className="w-8 h-8 text-primary-foreground" />

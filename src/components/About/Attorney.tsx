@@ -54,32 +54,37 @@ const Attorney = () => {
                             Nyiha Mathenge, LL.M
                         </h3>
                         <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-                            With over 15 years of experience in the legal field, John Mitchell brings a wealth
+                            With over 15 years of experience in the legal field, Nyiha Mathenge brings a wealth
                             of knowledge and expertise to Nyiha Mathenge Advocates. Nyiha has successfully represented clients in complex litigation, corporate transactions,
-                            and family law matters.
+                            and family law matters. She is also an expert in Alternative Dispute Resolution and an ardent advocate for Women Peace and Security (WPS) agenda.
                         </p>
                         <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
                             Nyiha's approach to law is both strategic and compassionate, ensuring that each client
-                            receives personalized attention while benefiting from his extensive legal expertise.
-                            He is admitted to practice in multiple jurisdictions and maintains active memberships
-                            in several professional legal organizations.
+                            receives personalized attention while benefiting from her extensive legal expertise, driving impactful legal strategies at the intersection of Commercial Law, Conflict Resolution and Gender Equality.
                         </p>
+                        <h4 className="text-xl font-serif font-semibold text-primary mb-3">
+                            Qualifications
+                        </h4>
                         <div className="space-y-2">
-                            <div className="flex items-center space-x-3">
-                                <div className="w-2 h-2 bg-accent rounded-full"></div>
-                                <span className="text-foreground">N.M., Law School</span>
-                            </div>
                             <div className="flex items-center space-x-3">
                                 <div className="w-2 h-2 bg-accent rounded-full"></div>
                                 <span className="text-foreground">15+ Years Legal Experience</span>
                             </div>
                             <div className="flex items-center space-x-3">
                                 <div className="w-2 h-2 bg-accent rounded-full"></div>
-                                <span className="text-foreground">State Bar Association Member</span>
+                                <span className="text-foreground">Moi University - LLB</span>
                             </div>
                             <div className="flex items-center space-x-3">
                                 <div className="w-2 h-2 bg-accent rounded-full"></div>
-                                <span className="text-foreground">Certified in Multiple Practice Areas</span>
+                                <span className="text-foreground">Kenya School of Law - Dip KSL</span>
+                            </div>
+                            <div className="flex items-center space-x-3">
+                                <div className="w-2 h-2 bg-accent rounded-full"></div>
+                                <span className="text-foreground">University of Nairobi - LLM</span>
+                            </div>
+                            <div className="flex items-center space-x-3">
+                                <div className="w-2 h-2 bg-accent rounded-full"></div>
+                                <span className="text-foreground">CiARB - UK</span>
                             </div>
                         </div>
                     </motion.div>

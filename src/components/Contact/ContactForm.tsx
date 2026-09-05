@@ -60,7 +60,7 @@ const ContactForm = () => {
 
   const contactInfo = [
     { icon: Phone, title: "Phone", content: "+254 726 479027", description: "Mon-Fri 9AM-6PM" },
-    { icon: Mail, title: "Email", content: "nma@gmail.com", description: "24/7 Email Support" },
+    { icon: Mail, title: "Email", content: "info@nyihamathengelaw.com", description: "24/7 Email Support" },
     { icon: MapPin, title: "Office", content: "Westlands Commercial Center", description: "Nairobi, Kenya" },
     { icon: Clock, title: "Hours", content: "Mon-Fri: 9AM-6PM", description: "Emergency calls available" },
   ]

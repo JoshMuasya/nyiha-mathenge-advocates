@@ -40,23 +40,6 @@ const PracticeAreas = () => {
 
     const practiceAreas = [
         {
-            icon: Scale,
-            title: "Criminal Defense",
-            description:
-                "Comprehensive criminal defense representation with a focus on protecting your rights and achieving the best possible outcome.",
-            services: [
-                "DUI/DWI Defense",
-                "Drug Crime Defense",
-                "White Collar Crimes",
-                "Assault & Battery",
-                "Theft & Property Crimes",
-                "Traffic Violations",
-                "Appeals & Post-Conviction Relief",
-            ],
-            details:
-                "Our criminal defense team has successfully defended clients against a wide range of charges. We understand the serious consequences of criminal convictions and work tirelessly to protect your freedom, reputation, and future.",
-        },
-        {
             icon: Building,
             title: "Corporate Law",
             description:

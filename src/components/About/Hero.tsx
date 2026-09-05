@@ -18,7 +18,7 @@ const Hero = () => {
                     </h1>
                     <p className="text-xl text-muted-foreground leading-relaxed">
                         Founded on principles of integrity, excellence, and unwavering dedication to justice,
-                        Blue Accord Law has been serving clients with distinction for over 15 years.
+                        Nyiha Mathenge Advocates has been serving clients with distinction for over 15 years.
                     </p>
                 </motion.div>
             </div>

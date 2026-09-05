@@ -14,13 +14,6 @@ import {
 
 const practiceAreas = [
     {
-        icon: Scale,
-        title: "Criminal Defense",
-        description:
-            "Expert defense representation for all criminal matters with a proven track record.",
-        features: ["DUI Defense", "Drug Crimes", "White Collar Crimes", "Appeals"],
-    },
-    {
         icon: Building,
         title: "Corporate Law",
         description:
